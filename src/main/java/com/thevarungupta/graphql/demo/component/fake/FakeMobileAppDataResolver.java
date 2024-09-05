@@ -17,6 +17,33 @@ import java.util.stream.Collectors;
 @DgsComponent
 public class FakeMobileAppDataResolver {
 
+    /***
+     * query mobileApps($mobileAppFilter: MobileAppFilter){
+     *   mobileApps(mobileAppFilter: $mobileAppFilter){
+     *     name
+     *     version
+     *     platform
+     *     author{
+     *       name
+     *     }
+     *   }
+     * }
+     *
+     *
+     *
+     * {
+     *   "mobileAppFilter": {
+     *     "platform": "Android",
+     *     "author": {
+     *       "name": "Stringtough"
+     *     }
+     *   }
+     * }
+     *
+     * ***/
+
+
+
     @DgsData(
             parentType = DgsConstants.QUERY_TYPE,
             field = DgsConstants.QUERY.MobileApps
