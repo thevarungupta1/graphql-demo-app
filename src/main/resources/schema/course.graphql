@@ -5,3 +5,8 @@ type Query {
     booksByReleased(releasedInput: ReleaseHistoryInput!): [Book]
     mobileApps(mobileAppFilter: MobileAppFilter): [MobileApp]
 }
+
+type Mutation{
+    addHello(helloInput: HelloInput) : Int
+    replaceHelloText(helloInput: HelloInput) : [Hello]
+}
